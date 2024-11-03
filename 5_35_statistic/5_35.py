@@ -1,4 +1,5 @@
 import random
+from math import comb
 
 numbers_of_rotation = int(input("Моля въведете броя на тегленията на числата: "))
 
@@ -7,7 +8,7 @@ value_list = [0 for num in range(1, 6)]
 
 my_dictionary = dict(zip(keys_list, value_list))
 my_list = []
-total_number_of_combination = (35 * 34 * 33 * 32 * 31) / (5 * 4 * 3 * 2 * 1)
+total_number_of_combination = comb(35, 5)
 
 toto_keys_list = [num for num in range(1, 36)]
 toto_value_list = [0 for num in range(1, 36)]
