@@ -3,18 +3,12 @@ from math import comb
 
 numbers_of_rotation = int(input("Моля въведете броя на тегленията на числата: "))
 
-keys_list = [num for num in range(1, 6)]
-value_list = [0 for num in range(1, 6)]
-
-my_dictionary = dict(zip(keys_list, value_list))
+my_dictionary = {}
+toto_dictionary = {}
 my_list = []
+toto_list = []
 total_number_of_combination = comb(35, 5)
 
-toto_keys_list = [num for num in range(1, 36)]
-toto_value_list = [0 for num in range(1, 36)]
-
-toto_dictionary = dict(zip(keys_list, value_list))
-toto_list = []
 counter = 0
 
 for _ in range(numbers_of_rotation):
@@ -41,6 +35,7 @@ for _ in range(numbers_of_rotation):
 print()
 print(f"Вашият брой 5-ци: [{counter:_}] | от {numbers_of_rotation:_} броя тегления се очаква "
       f"[{(numbers_of_rotation / total_number_of_combination):.2f}] броя 5-ци")
+print("Поздравления!!!" if counter >= numbers_of_rotation / total_number_of_combination else "Съжаляваме:(")
 print()
 for element in my_list:
     if element not in my_dictionary:
